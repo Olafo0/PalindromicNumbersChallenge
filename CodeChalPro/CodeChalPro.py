@@ -1,6 +1,23 @@
 
-#BigBoyNumbers = [121,1001,1234321]
-BigBoyNumbers = [0,11,121,1221,12321,1234554321,1234567898765421,1111444444441111]
+
+BigBoyNumbers = []
+
+def initList():
+    # Gets all the palindromic numbers
+    for i in range(0,100):
+       print(f"Initilizing..{i} / 999999")
+       temp_list = []
+       temp_revslist = []
+       strI = str(i)
+
+
+       for e in strI:
+           temp_list.append(e)
+           temp_revslist.append(e)
+       temp_revslist.reverse()
+
+       if temp_list == temp_revslist:
+           BigBoyNumbers.append(int(i))
 
 
 
@@ -23,7 +40,6 @@ def IsNumPali(EntNum):
     ReverseList.reverse()
 
     if List == ReverseList:
-        BigBoyNumbers.append(EntNum)
         return True
 
     else:
@@ -31,13 +47,16 @@ def IsNumPali(EntNum):
 
 def SmallestHighPalNum(EntNum):
     BigBoyNumbers.sort()
+    i = BigBoyNumbers.index(EntNum)
+    print(i)
 
     try:
-        i = BigBoyNumbers.index(EntNum)
+       
         if BigBoyNumbers[i] < BigBoyNumbers[i+1] and BigBoyNumbers[i+1] < BigBoyNumbers[i+2]:
             print("Smallest palindromic number that is higher than the input :",BigBoyNumbers[i+1])
+            print("s")
     except:
-        print("{EntNum} Largest number in the list")
+        print(f"{EntNum} Largest number in the list")
 
 
 
@@ -60,22 +79,33 @@ def BigDiffPali():
     print(f"Between the numbers {x} and {y}")
 
 
+
 def PaliDoesNotEqual():
+    eq = 0
+    neq = 0
     i = 0
 
-    for i in range(0,len(BigBoyNumbers)-1):
+    for i in range(0,len(BigBoyNumbers)):
+        try:
+            if BigBoyNumbers[i] + BigBoyNumbers[i+1] != BigBoyNumbers[i+3]:
+                neq = neq + 1
+            else:
+                eq = eq + 1
+        except:
+            pass
+
+    print(f"Palindormic which are not the sum of two : {neq}")
+    print(f"Palindormic which are the sum of two : {eq}")
 
 
 
 
+
+initList()
+print(BigBoyNumbers)
 Flag = True 
-
 while Flag:
     Flag = False
-
-
-
-
 
     EntNum = UserNumber()
     IsNumPaliMsg = IsNumPali(EntNum)
@@ -87,6 +117,8 @@ while Flag:
         SmallestHighPalNum(EntNum)
         # Task 2
         BigDiffPali()
+        #Task 3
+        PaliDoesNotEqual()
 
     else:
         print("The number isn't Palindormic!")
