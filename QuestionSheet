@@ -1,0 +1,22 @@
+T – Level Advanced
+Question 1: Palindromic Numbers
+A palindromic number is one that is the same when its digits are reversed. For
+example:
+• 98789 is a palindrome;
+• 12344321 is a palindrome;
+• 12345 is not a palindrome as it becomes 54321 when reversed.
+
+Except for 0, a palindromic number’s leftmost digit must be non-zero.
+
+1(a) [ 25 marks ]
+Write a program that reads in a positive integer of up to 20 digits.
+You should output the smallest palindromic number that is higher than the
+input.
+
+1(b) [ 2 marks ]
+What is the largest difference between a palindromic number (of up to 20
+digits) and the next highest palindromic number?
+
+1(c) [ 4 marks ]
+How many integers are there, between 1 and 99999 inclusive, that are not the
+sum of two palindromic numbers?
