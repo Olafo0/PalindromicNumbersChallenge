@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CodeChalPro", "CodeChalPro\CodeChalPro.pyproj", "{1E0B5FFB-FFF6-43BF-BBDC-24663A3872AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E0B5FFB-FFF6-43BF-BBDC-24663A3872AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0B5FFB-FFF6-43BF-BBDC-24663A3872AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0034AD85-ABF2-4EAC-B24A-6C18051E0388}
+	EndGlobalSection
+EndGlobal
